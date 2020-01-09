@@ -45,7 +45,6 @@ public class Carro extends Veiculo{
 		this.ano = ano;
 	}
 	
-
 	public void imprime() {
 		System.out.println(marca + "\n" + getModelo() +"\n"+ getPassageiros() + "\n" + portas + "\n" + ano);
 	}

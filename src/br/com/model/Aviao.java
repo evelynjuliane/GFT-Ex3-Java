@@ -35,19 +35,22 @@ public class Aviao extends Veiculo {
 		this.uso = uso;
 	}
 	
+	public void Acelerar(){
+		if(isLigado == false) {
+			System.out.println("Não é possivel acelerar com o avião desligado!");
+		}
+		this.velocidade = 1000;
+		if(this.litrosCombustivel < 0) {
+			System.out.println("Veiculo sem combustivel");
+		}else {
+			this.litrosCombustivel = -10;
+		}
+	}
+	
 	public void Abastecer(String litrosACombustivel){
 		super.Abastecer(Integer.parseInt(litrosACombustivel));
 	}
 	
-	public void imprimeAviao() {
-		System.out.println(tipo
-				+"\n"
-				+ getModelo() 
-				+"\n"
-				+ getPassageiros()
-				+"\n"
-				+ uso);
-	}
 	public void imprime() {
 		System.out.println(getModelo() +"\n"+ getPassageiros() + "\n" + tipo + "\n" + uso);
 	}

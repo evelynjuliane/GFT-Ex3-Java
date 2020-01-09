@@ -2,15 +2,15 @@ package br.com.model;
 
 public abstract class Veiculo {
 	
-	private String modelo;
-	private int passageiros;
-	private String placa;
-	private String cor;
-	private float km;
+	protected String modelo;
+	protected int passageiros;
+	protected String placa;
+	protected String cor;
+	protected float km;
 	protected boolean isLigado;
 	protected int litrosCombustivel;
 	protected int velocidade;
-	private Double preco;
+	protected Double preco;
 	
 	public Veiculo() {
 	}
@@ -99,12 +99,15 @@ public abstract class Veiculo {
 	
 	public void Acelerar(){
 		if(isLigado == false) {
-			System.out.println("Não é possivel acelerar com o carro desligado!");
+			System.out.println("Não é possivel acelerar com o veiculo desligado!");
 		}
-		this.velocidade = 20;
-		this.litrosCombustivel = -1;
+		this.velocidade = 15;
+		if(this.litrosCombustivel < 0) {
+			System.out.println("Veiculo sem combustivel");
+		}else {
+			this.litrosCombustivel = -4;
+		}
 	}
-	
 	public void Abastecer(int litrosACombustivel){
 		if(this.litrosCombustivel < 100) {
 			this.litrosCombustivel = litrosACombustivel;
@@ -113,5 +116,5 @@ public abstract class Veiculo {
 		}
 	}
 	
-
+  
 }
