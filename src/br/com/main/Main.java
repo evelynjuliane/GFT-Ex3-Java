@@ -7,31 +7,24 @@ public class Main{
 	public static void main(String[] args) {
 		
 		Aviao aviao; 
-		aviao = new Aviao();
+		aviao = new Aviao("ABC", 2, "aaa222", "BRANCO", 0, false, 100, 0, 1000.0, "Comercial", "França");
 		
-		aviao.setModelo("ABC");
-		aviao.setTipo("Comercial");
-		aviao.setCor("ROSA");
 		aviao.Acelerar();
-		aviao.Abastecer(2);
-		
+		aviao.Abastecer(100);
+	
 		Carro carro; 
-		carro= new Carro();
+		carro= new Carro("Uno", 4, "FBC-2313", "PRETO", 50, true, 120, 0, 200.0, "Fiat", 5, "2019");
 		
-		carro.setModelo("ABC");
-		carro.setMarca("Fiat");
-		carro.setCor("Azul");
+		carro.Acelerar();
 		carro.Abastecer(100);
 		carro.Abastecer(10);
 		
 		Caminhao caminhao; 
-		caminhao = new Caminhao();
+		caminhao = new Caminhao("VOLVO", 4, "AAA-222", "AZUL", 10, true, 200, 0, 100.00);
 		
-		caminhao.setModelo("ABC");
-		carro.setPassageiros(2);
-		carro.setCor("Preto");
-		carro.Abastecer(100);
-		carro.Abastecer(10);
+		caminhao.Acelerar();
+		caminhao.Abastecer(100);
+		caminhao.Abastecer(10);
 		
 		carro.imprime();
 		caminhao.imprime();

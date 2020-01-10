@@ -115,6 +115,13 @@ public abstract class Veiculo {
 		System.out.println("O Veiculo está com o tanque cheio!");
 		}
 	}
+	public void imprime() {
+		
+		System.out.println("\nModelo:" + modelo + "\nPassageiros:" + passageiros +"\nPlaca:" + placa + "\n Cor:" + cor 
+				+ "\n KM:" + km + "\nStatus:" + isLigado + "\n Listros de combustivel:" + litrosCombustivel  + "\nVelocidade:" 
+	            + velocidade + "anPreço:" + preco);
+	}
+	
 	
   
 }

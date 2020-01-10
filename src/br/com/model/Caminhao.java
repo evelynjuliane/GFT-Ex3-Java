@@ -4,7 +4,6 @@ package br.com.model;
 public class Caminhao extends Veiculo {
 
 	public Caminhao() {
-		super();
 	}
 
 	public Caminhao(String modelo, int passageiros, String placa, String cor, float km, boolean isLigado,
@@ -24,7 +23,7 @@ public class Caminhao extends Veiculo {
 		}
 	}
 	public void Abastecer(float litrosACombustivel){
-		if(this.litrosCombustivel < 100) {
+		if(this.litrosCombustivel < 400) {
 			this.litrosCombustivel = (int)litrosACombustivel;
 		}else {
 		System.out.println("O Veiculo está com o tanque cheio!");
@@ -33,6 +32,6 @@ public class Caminhao extends Veiculo {
 	}
 	
 	public void imprime() {
-		System.out.println(getModelo() +"\n"+ getPassageiros() +  "\n" + getCor());
+		super.imprime();
 	}
 }
